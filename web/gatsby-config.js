@@ -5,6 +5,20 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'cbmuj639',
+        dataset: 'portfolio',
+        token: process.env.SANITY_TOKEN,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-env-variables',
+      options: {
+        whitelist: ["SANITY_TOKEN"]
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -5,6 +5,10 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Then we give our schema to the builder and provide the result to Sanity
+import post from './post';
+import person from './person';
+import project from './project';
+
 export default createSchema({
   // We name our schema
   name: 'default',
@@ -12,5 +16,8 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    post,
+    person,
+    project,
   ])
 })
