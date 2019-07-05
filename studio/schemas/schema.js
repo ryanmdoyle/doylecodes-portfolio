@@ -8,6 +8,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import post from './post';
 import person from './person';
 import project from './project';
+import featureImage from './feature_img';
 
 export default createSchema({
   // We name our schema
@@ -19,5 +20,6 @@ export default createSchema({
     post,
     person,
     project,
+    featureImage,
   ])
 })

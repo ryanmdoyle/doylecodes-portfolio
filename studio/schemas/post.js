@@ -17,13 +17,18 @@ export default {
       title: 'Author',
       name: 'author',
       type: 'reference',
-      to: [{ type: 'Person' }]
+      to: [{ type: 'person' }]
+    },
+    {
+      title: 'Feature Image',
+      name: 'featureImage',
+      type: 'featureImage',
     },
     {
       title: 'Content',
       name: 'content',
       type: 'array',
       of: [{ type: 'block' }],
-    }
+    },
   ]
 }
