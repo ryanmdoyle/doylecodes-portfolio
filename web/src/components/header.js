@@ -27,6 +27,9 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <h2 style={{ float: 'right' }}>
+        Page!
+      </h2>
     </div>
   </header>
 )
