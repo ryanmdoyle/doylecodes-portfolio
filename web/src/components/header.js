@@ -1,14 +1,15 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
 import styled from 'styled-components';
-import { Location } from '@reach/router'
+import { Location } from '@reach/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDev } from '@fortawesome/free-brands-svg-icons';
 import { faFreeCodeCamp } from '@fortawesome/free-brands-svg-icons';
 import { faCodepen } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import anime from 'lib/anime.es.js';
 
 const HeaderStyle = styled.header`
   display: flex;
