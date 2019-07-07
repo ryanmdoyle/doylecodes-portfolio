@@ -2,14 +2,10 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from 'styled-components';
+import {Spring} from 'react-spring/renderprops'
 import { Location } from '@reach/router';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faDev } from '@fortawesome/free-brands-svg-icons';
-import { faFreeCodeCamp } from '@fortawesome/free-brands-svg-icons';
-import { faCodepen } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import anime from 'lib/anime.es.js';
+
+import HeaderLinks from './HeaderLinks';
 
 const HeaderStyle = styled.header`
   display: flex;
@@ -60,15 +56,26 @@ const Header = ({ siteTitle }) => {
       <Location>
         {({ location }) => {
           if (location.pathname !== "/") return (
-            <div className='icons'>
-              <ul>
-                <li><FontAwesomeIcon icon={faGithub} /></li>
-                <li><FontAwesomeIcon icon={faDev} /></li>
-                <li><FontAwesomeIcon icon={faFreeCodeCamp} /></li>
-                <li><FontAwesomeIcon icon={faCodepen} /></li>
-                <li><FontAwesomeIcon icon={faTwitter} /></li>
-              </ul>
-            </div>
+            <Spring
+              from={{ opacity: 0 }}
+              to={{ opacity: 1 }}>
+              {props => (
+                <div style={props}>
+                  <HeaderLinks />
+                </div>
+              )}
+            </Spring>
+          )
+          if (location.pathname === "/") return (
+            <Spring
+              from={{ opacity: 1 }}
+              to={{ opacity: 0 }}>
+              {props => (
+                <div style={props}>
+                  <HeaderLinks />
+                </div>
+              )}
+            </Spring>
           )
         }}
       </Location>
