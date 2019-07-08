@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from 'styled-components';
-import {Spring} from 'react-spring/renderprops'
+import { Spring } from 'react-spring/renderprops'
 import { Location } from '@reach/router';
 
 import HeaderLinks from './HeaderLinks';
@@ -12,9 +12,8 @@ const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-  background-color: rebeccapurple;
   height: 80px;
-  color: white;
+  color: black;
   padding: 0 2rem 0 2rem;
   h1, h2 {
     margin: 0;
@@ -27,6 +26,9 @@ const HeaderStyle = styled.header`
   li {
     padding: 0 1rem;
     margin: 0;
+  }
+  li:hover {
+    font-weight: bolder;
   }
   a {
     color: white;

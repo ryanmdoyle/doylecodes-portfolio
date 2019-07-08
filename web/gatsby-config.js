@@ -5,6 +5,8 @@ module.exports = {
     author: `@doylecodes`,
   },
   plugins: [
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-sanity',
       options: {

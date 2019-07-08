@@ -9,19 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components';
-import {Spring} from 'react-spring/renderprops'
+import { Spring } from 'react-spring/renderprops'
 
-import Header from "./header"
+import Header from "./Header"
 import "./layout.css"
-
-const BackgroundStyled = styled.div`
-  height: 100vh;
-  width: 100%;
-  background-image: url('public/mountains.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-`;
+import Background from './Background';
 
 const MainStyled = styled.main`
   margin: 0 auto;
@@ -41,13 +33,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <BackgroundStyled >
+    <Background >
       <Header siteTitle={data.site.siteMetadata.title} />
       <Spring
-        from={{opacity: 0}}
-        to={{opacity: 1}}
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
       >
-        { opacity => (
+        {opacity => (
           <div style={opacity}>
             <MainStyled>
               {children}
@@ -55,7 +47,7 @@ const Layout = ({ children }) => {
           </div>
         )}
       </Spring>
-    </BackgroundStyled>
+    </Background>
   )
 }
 
