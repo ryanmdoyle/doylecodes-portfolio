@@ -27,12 +27,15 @@ const HeaderStyle = styled.header`
     padding: 0 1rem;
     margin: 0;
     font-weight: bold;
+    transition: color 1s, transform 0.5s;
   }
-  li:hover {
+  li:hover, a:hover {
     transform: scale(1.2);
+    color: rebeccapurple;
+    transition: color 1s, transform 0.5s;
   }
   a {
-    color: white;
+    color: black;
     text-decoration: none;
   }
   .icons {
@@ -48,12 +51,11 @@ const Header = ({ siteTitle }) => {
     <HeaderStyle>
       <div className='nav'>
         <ul>
-          <li>Work</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>
-            <Link to="/page-2/">Go to page 2</Link>
-          </li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/work/">Work</Link></li>
+          <li><Link to="/about/">About</Link></li>
+          <li><Link to="/contact/">Contact</Link></li>
+          <li><Link to="/page-2/">page 2</Link></li>
         </ul>
       </div>
       <Location>
@@ -95,4 +97,5 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Header;
+export { HeaderStyle };
