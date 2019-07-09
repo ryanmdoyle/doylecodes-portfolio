@@ -26,9 +26,10 @@ const HeaderStyle = styled.header`
   li {
     padding: 0 1rem;
     margin: 0;
+    font-weight: bold;
   }
   li:hover {
-    font-weight: bolder;
+    transform: scale(1.2);
   }
   a {
     color: white;
@@ -59,8 +60,8 @@ const Header = ({ siteTitle }) => {
         {({ location }) => {
           if (location.pathname !== "/") return (
             <Spring
-              from={{ opacity: 0 }}
-              to={{ opacity: 1 }}>
+              from={{ opacity: 0, position: 'relative', top: -100 }}
+              to={{ opacity: 1, position: 'relative', top: 0 }}>
               {props => (
                 <div style={props}>
                   <HeaderLinks />

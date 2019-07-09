@@ -17,7 +17,7 @@ const HeaderLinks = () => {
         <li><FontAwesomeIcon icon={faTwitter} /></li>
       </ul>
     </div>
-             
+
   );
 };
 

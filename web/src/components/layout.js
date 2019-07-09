@@ -12,13 +12,22 @@ import styled from 'styled-components';
 import { Spring } from 'react-spring/renderprops'
 
 import Header from "./Header"
-import "./layout.css"
-import Background from './Background';
+import "./Layout.css"
+import bgImage from '../images/mountains.jpg';
 
 const MainStyled = styled.main`
   margin: 0 auto;
   max-width: 960px;
   padding: 0 1.1rem 1.5rem 1.1rem;
+`;
+
+const Background = styled.div`
+  height: 100vh;
+  width: 100%;
+  background-image: url(${bgImage});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 const Layout = ({ children }) => {
