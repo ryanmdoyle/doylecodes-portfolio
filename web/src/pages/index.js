@@ -63,9 +63,11 @@ padding-top: 3rem;
     margin: 0;
     font-weight: bold;
     color: white;
+    transition: transform 1s;
   }
   li:hover {
     transform: scale(1.2);
+    transition: transform 1s;
   }
   .icons {
     display: flex;
