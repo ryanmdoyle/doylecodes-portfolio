@@ -1,14 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import ContentContainer from '../components/styledComponents/ContentContainer';
 
 const About = () => (
   <Layout>
     <SEO title="About" />
     <h1>About Me</h1>
-    <p>Welcome to the about page</p>
+    <ContentContainer>
+      <p>in the container</p>
+    </ContentContainer>
   </Layout>
 )
 
