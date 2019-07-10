@@ -55,33 +55,37 @@ const Header = ({ siteTitle }) => {
           <li><Link to="/work/">Work</Link></li>
           <li><Link to="/about/">About</Link></li>
           <li><Link to="/contact/">Contact</Link></li>
-          <li><Link to="/page-2/">page 2</Link></li>
         </ul>
       </div>
       <Location>
         {({ location }) => {
-          if (location.pathname !== "/") return (
-            <Spring
-              from={{ opacity: 0, position: 'relative', top: -100 }}
-              to={{ opacity: 1, position: 'relative', top: 0 }}>
-              {props => (
-                <div style={props}>
-                  <HeaderLinks />
-                </div>
-              )}
-            </Spring>
-          )
-          if (location.pathname === "/") return (
-            <Spring
-              from={{ opacity: 1 }}
-              to={{ opacity: 0 }}>
-              {props => (
-                <div style={props}>
-                  <HeaderLinks />
-                </div>
-              )}
-            </Spring>
-          )
+          if (location.pathname !== "/") {
+            console.log(location);
+            return (
+              <Spring
+                from={{ opacity: 1 }}
+                to={{ opacity: 1 }}>
+                {props => (
+                  <div style={props}>
+                    <HeaderLinks />
+                  </div>
+                )}
+              </Spring>
+            )
+          }
+          if (location.pathname === "/") {
+            return (
+              <Spring
+                from={{ opacity: 1 }}
+                to={{ opacity: 0 }}>
+                {props => (
+                  <div style={props}>
+                    <HeaderLinks />
+                  </div>
+                )}
+              </Spring>
+            )
+          }
         }}
       </Location>
     </HeaderStyle>
