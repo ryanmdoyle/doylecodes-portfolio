@@ -1,13 +1,16 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import ContentContainer from '../components/styledComponents/ContentContainer';
 
 const Work = () => (
   <Layout>
     <SEO title="Work" />
     <h1>Work</h1>
-    <p>Welcome to my portfolio</p>
+    <ContentContainer>
+      <p>Welcome to my portfolio</p>
+    </ContentContainer>
   </Layout>
 )
 
