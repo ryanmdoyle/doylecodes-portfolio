@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import ContentContainer from '../components/styledComponents/ContentContainer';
+import FormStyled from '../components/styledComponents/FormStyled';
 
 
 const Contact = () => (
@@ -11,6 +12,10 @@ const Contact = () => (
     <SEO title="contact" />
     <h1>Contact</h1>
     <ContentContainer>
+      <div className='text'>
+        <h2>Let's Talk!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus semper ex in volutpat. Integer interdum nisi in diam faucibus, auctor laoreet arcu tincidunt. Donec mollis volutpat eros a viverra. Aenean eu dui nec nisi egestas suscipit nec eu turpis. Nunc dignissim odio quis elit sollicitudin, nec vehicula augue euismod. Etiam eget nunc id dui eleifend finibus quis quis eros. Curabitur rutrum odio sit amet ultricies blandit. Proin quis aliquet tortor. Morbi id diam dapibus mi condimentum pretium vitae a risus. Duis sit amet ante sed elit bibendum iaculis ornare vitae orci. Morbi ac eros elit. Donec vehicula lacus justo, vel pretium massa molestie eget. Etiam ac dui purus. </p>
+      </div>
       <FormStyled>
         <form
           name='contact'
@@ -39,55 +44,5 @@ const Contact = () => (
     </ContentContainer>
   </Layout>
 )
-
-const FormStyled = styled.div`
-  label {
-    display: block;
-    display: table-header-group;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: font-size 0.5s;
-  }
-
-  input, textarea {
-    display: table-row-group;
-    width: 30vw;
-    height: 2rem;
-    transition: height 0.5s, background-color 1s;
-    border: 1px solid gray;
-  }
-
-  .pseudo-table {
-    display: table;
-    margin-bottom: 1rem;
-  }
-
-  input:focus + label {
-    font-size: 1.5rem;
-    transition: font-size 0.5s;
-    color: rgb(66, 33, 99, 0.8);
-    transition: font-size 0.5s, color 1s;
-  }
-
-  textarea:focus + label {
-    font-size: 1.5rem;
-    transition: font-size 0.5s;
-    color: rgb(66, 33, 99, 0.8);
-    transition: font-size 0.5s, color 1s;
-  }
-
-  input:focus, textarea:focus {
-    transition: font-size 0.5s;
-    height: 2.5rem;
-    transition: height 0.5s, background-color 1s;
-    border: 2px solid rgb(66, 33, 99, 0.2);
-    background-color: rgb(66, 33, 99, 0.2)
-  }
-
-  .hidden {
-    display: none;
-    visibility: hidden;
-  }
-`;
 
 export default Contact
