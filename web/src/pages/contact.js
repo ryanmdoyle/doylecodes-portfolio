@@ -8,7 +8,7 @@ import FormStyled from '../components/styledComponents/FormStyled';
 
 
 const Contact = () => (
-  <Layout>
+  <>
     <SEO title="contact" />
     <h1>Contact</h1>
     <ContentContainer>
@@ -42,7 +42,7 @@ const Contact = () => (
         </form>
       </FormStyled>
     </ContentContainer>
-  </Layout>
+  </>
 )
 
 export default Contact

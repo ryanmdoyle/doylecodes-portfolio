@@ -2,12 +2,12 @@ import React from "react"
 import styled from 'styled-components';
 import { Spring } from 'react-spring/renderprops'
 
-import Layout from "../components/Layout"
+// import NewLayout from "../components/Layout"
 import SEO from "../components/SEO"
 import HeaderLinks from "../components/HeaderLinks";
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
     <Welcome>
       <div className='welcome__text'>
@@ -28,7 +28,7 @@ const IndexPage = () => (
         </Spring>
       </div>
     </Welcome>
-  </Layout>
+  </>
 )
 
 const Welcome = styled.div`

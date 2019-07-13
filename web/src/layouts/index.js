@@ -1,18 +1,11 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components';
 import { Spring } from 'react-spring/renderprops'
 
-import Header from "./Header"
-import "./Layout.css"
+import Header from "..//components/Header"
+import "../components/Layout.css"
 import bgImage from '../images/mountains.jpg';
 
 const MainStyled = styled.main`
@@ -30,7 +23,7 @@ const Background = styled.div`
   background-size: cover;
 `;
 
-const Layout = ({ children }) => {
+const NewLayout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -60,8 +53,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+NewLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default NewLayout
