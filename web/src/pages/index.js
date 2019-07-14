@@ -2,7 +2,6 @@ import React from "react"
 import styled from 'styled-components';
 import { Spring } from 'react-spring/renderprops'
 
-// import NewLayout from "../components/Layout"
 import SEO from "../components/SEO"
 import HeaderLinks from "../components/HeaderLinks";
 

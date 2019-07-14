@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 
-import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import ContentContainer from '../components/styledComponents/ContentContainer';
 import FormStyled from '../components/styledComponents/FormStyled';
