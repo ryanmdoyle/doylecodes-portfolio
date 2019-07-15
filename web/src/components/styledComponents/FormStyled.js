@@ -17,6 +17,10 @@ const FormStyled = styled.div`
     border: 1px solid gray;
   }
 
+  textarea {
+    max-width: 750px;
+  }
+
   .pseudo-table {
     display: table;
     margin-bottom: 1rem;
