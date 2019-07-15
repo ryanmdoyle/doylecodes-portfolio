@@ -63,7 +63,6 @@ const Header = ({ siteTitle }) => {
             console.log(location);
             return (
               <Spring
-                from={{ opacity: 1 }}
                 to={{ opacity: 1 }}>
                 {props => (
                   <div style={props}>
@@ -76,7 +75,6 @@ const Header = ({ siteTitle }) => {
           if (location.pathname === "/") {
             return (
               <Spring
-                from={{ opacity: 1 }}
                 to={{ opacity: 0 }}>
                 {props => (
                   <div style={props}>
