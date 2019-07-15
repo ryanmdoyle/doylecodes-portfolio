@@ -4,9 +4,10 @@ import { Spring } from 'react-spring/renderprops'
 
 import SEO from "../components/SEO"
 import HeaderLinks from "../components/HeaderLinks";
+import PageFade from '../components/PageFade';
 
 const IndexPage = () => (
-  <>
+  <PageFade>
     <SEO title="Home" />
     <Welcome>
       <div className='welcome__text'>
@@ -27,7 +28,7 @@ const IndexPage = () => (
         </Spring>
       </div>
     </Welcome>
-  </>
+  </PageFade>
 )
 
 const Welcome = styled.div`
