@@ -18,5 +18,15 @@ export default {
       name: 'featureImage',
       type: 'featureImage',
     },
+    {
+      title: 'Github Link',
+      name: 'github',
+      type: 'url'
+    },
+    {
+      title: 'Live Site Link',
+      name: "liveSiteURL",
+      type: 'url'
+    }
   ]
 }
