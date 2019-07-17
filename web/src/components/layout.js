@@ -17,7 +17,7 @@ import bgImage from '../images/mountains.jpg';
 
 const MainStyled = styled.main`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1280px;
   padding: 0 1.1rem 1.5rem 1.1rem;
 `;
 
