@@ -1,8 +1,17 @@
 import React from 'react';
-import { Spring } from 'react-spring/renderprops';
 import styled from 'styled-components';
 
 const ProjectCard = styled.div`
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 0.9rem;
+    text-align: center;
+  }
   .card {
     height: 200px;
     width: 300px;
@@ -13,17 +22,15 @@ const ProjectCard = styled.div`
     transition: box-shadow 0.3s;
     box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.2);
   }
-
   .card:hover {
     box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.5);
     transition: box-shadow 0.3s;
   }
-
   .card--hover {
     height: 100%;
     width: 100%;
     padding: 1rem;
-    background-color: rgb(66,33,99,0.7);
+    background-color: rgb(66,33,99,0.8);
     color: white;
     opacity: 0;
     transition: opacity 1s;
@@ -32,28 +39,30 @@ const ProjectCard = styled.div`
     justify-content: center;
     flex-direction: column;
   }
-
-  .card--hover > h2 {
+  .card--hover h2 {
     margin-bottom: 0.5rem;
     overflow-wrap: break-word;
   }
-
   .card--hover:hover {
-    opacity: 0.8;
+    opacity: 1;
     transition: opacity 1s;
   }
-
   a {
     color: white;
     border: 1px solid white;
     padding: 5px;
     text-decoration: none;
-    transition: border-radius 0.5s;
+    transition: border-radius 0.5s, background-color 0.5s;
+    font-size: 0.7rem;
+    display: inline-block;
+    margin: 0 0.5rem;
   }
   a:hover {
+    color: rebeccapurple;
     border: 1px solid white;
     border-radius: 5px;
-    transition: border-radius 0.5s;
+    background-color: white;
+    transition: border-radius 0.5s, background-color 0.5s;
   }
 `;
 
@@ -65,7 +74,10 @@ const PortfolioProject = (props) => {
         <div className='card--hover'>
           <h2>{props.title}</h2>
           <p>{props.description}</p>
-          <a href={props.href}>See More</a>
+          <div>
+            {props.github && (<a href={props.github}>Github</a>)}
+            {props.liveSite && (<a href={props.liveSite}>Live Site</a>)}
+          </div>
         </div>
       </div>
     </ProjectCard>
