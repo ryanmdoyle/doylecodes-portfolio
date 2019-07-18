@@ -42,21 +42,34 @@ const ProjectCard = styled.div`
     opacity: 0.8;
     transition: opacity 1s;
   }
+
+  a {
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    text-decoration: none;
+    transition: border-radius 0.5s;
+  }
+  a:hover {
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: border-radius 0.5s;
+  }
 `;
 
 
 const PortfolioProject = (props) => {
   return (
     <ProjectCard>
-      <div className='card' style={{backgroundImage: `url('https://res.cloudinary.com/dwut3uz4n/image/upload/v1528586792/sample.jpg')`}}>
+      <div className='card' style={{ backgroundImage: `url('${props.background}')` }}>
         <div className='card--hover'>
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
-          <a href={props.href}>See More -></a>
+          <h2>{props.title}</h2>
+          <p>{props.description}</p>
+          <a href={props.href}>See More</a>
         </div>
       </div>
     </ProjectCard>
-    
+
   );
 };
 
