@@ -1,11 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 
 import SEO from "../components/SEO";
 import ContentContainer from '../components/styledComponents/ContentContainer';
 import PageFade from '../components/PageFade';
 import PortfolioProject from '../components/PortfolioProject';
-import project from "../../../studio/schemas/project";
 
 const PortfolioGrid = styled.div`
   display: flex;
@@ -28,7 +28,8 @@ const Work = ({ data }) => (
             title={p.title}
             description={p.description}
             background={p.featureImage.asset.fixed.src}
-            href={'http://www.google.com'}
+            github={p.github}
+            liveSite={p.liveSiteURL}
           />
         ))}
       </PortfolioGrid>
@@ -44,9 +45,11 @@ export const query = graphql`
         description
         id
         title
+        github
+        liveSiteURL
         featureImage {
           asset {
-            fixed {
+            fixed(width: 300) {
               src
             }
           }
