@@ -1,5 +1,4 @@
 import React from "react";
-import styled from 'styled-components';
 
 import SEO from "../components/SEO";
 import ContentContainer from '../components/styledComponents/ContentContainer';
