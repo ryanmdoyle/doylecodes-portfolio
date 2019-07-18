@@ -69,6 +69,14 @@ padding-top: 3rem;
     transform: scale(1.2);
     transition: transform 1s;
   }
+  a {
+    color: white;
+    transition: color 0.5s;
+  }
+  a:hover {
+    color: rebeccapurple;
+    transition: color 0.5s; 
+  }
   .icons {
     display: flex;
     justify-content: space-between;
