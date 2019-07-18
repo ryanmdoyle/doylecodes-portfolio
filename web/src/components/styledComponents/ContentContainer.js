@@ -7,9 +7,8 @@ const ContentContainer = styled.div`
   min-height: 500px;
   max-height: 75vh;
   border-radius: 0.25rem;
-  background-color: #cbced3;
+  background-color: rgb(203, 206, 211, 0.9);
   box-shadow: 0 0 5px rgb(0, 0, 0, 0.1);
-  opacity: 0.9;
   overflow-y: auto;
   overflow-x: hidden;
 `;
