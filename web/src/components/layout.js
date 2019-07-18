@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Spring } from 'react-spring/renderprops'
 
 import Header from "./Header"
-import "./Layout.css"
+import "./layout.css"
 import bgImage from '../images/mountains.jpg';
 
 const MainStyled = styled.main`
