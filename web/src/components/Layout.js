@@ -5,7 +5,6 @@ import { Spring } from 'react-spring/renderprops'
 
 import Header from "./Header"
 import "./layout.css"
-import bgImage from '../images/mountains.jpg';
 
 const MainStyled = styled.main`
   margin: 0 auto;
@@ -19,7 +18,7 @@ const Layout = ({ children }) => {
       <div style={{
         height: '100vh',
         width: '100%',
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `url(https://res.cloudinary.com/dwut3uz4n/image/upload/v1563496204/mountains.jpg)`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover'}
