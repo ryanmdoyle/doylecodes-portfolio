@@ -13,33 +13,31 @@ const MainStyled = styled.main`
   padding: 0 1.1rem 1.5rem 1.1rem;
 `;
 
-const Background = styled.div`
-  height: 100vh;
-  width: 100%;
-  background-image: url(${bgImage});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-`;
-
 const Layout = ({ children }) => {
 
   return (
-    <Background >
-      <Header />
-      <Spring
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}
-      >
-        {opacity => (
-          <div style={opacity}>
-            <MainStyled>
-              {children}
-            </MainStyled>
-          </div>
-        )}
-      </Spring>
-    </Background>
+      <div style={{
+        height: '100vh',
+        width: '100%',
+        backgroundImage: `url(${bgImage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'}
+      }>
+        <Header />
+        <Spring
+          from={{ opacity: 0 }}
+          to={{ opacity: 1 }}
+        >
+          {opacity => (
+            <div style={opacity}>
+              <MainStyled>
+                {children}
+              </MainStyled>
+            </div>
+          )}
+        </Spring>
+      </div>
   )
 }
 
