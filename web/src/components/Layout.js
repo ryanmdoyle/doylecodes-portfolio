@@ -25,7 +25,7 @@ const Background = styled.div`
 const Layout = ({ children }) => {
 
   return (
-      <Background>
+      <div className='background'>
         <Header />
         <Spring
           from={{ opacity: 0 }}
@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
             </div>
           )}
         </Spring>
-      </Background>
+      </div>
   )
 }
 
