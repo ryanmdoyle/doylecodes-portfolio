@@ -3,7 +3,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
-const BackgroundSection = ({ className }) => (
+const BackgroundSection = ({ className, children }) => (
   <StaticQuery query={graphql`
       query {
         desktop: file(relativePath: { eq: "mountains.jpg" }) {
@@ -24,7 +24,7 @@ const BackgroundSection = ({ className }) => (
           fluid={imageData}
           backgroundColor={`#040e18`}
         >
-          <h1>Hello gatsby-background-image</h1>
+          {children}
         </BackgroundImage>
       )
     }
@@ -33,9 +33,10 @@ const BackgroundSection = ({ className }) => (
 )
 
 const StyledBackground = styled(BackgroundSection)`
+  height: 100vh;
   width: 100%;
-  background-position: bottom center;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 `
 
