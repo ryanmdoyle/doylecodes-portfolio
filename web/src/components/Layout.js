@@ -16,7 +16,7 @@ const MainStyled = styled.main`
 const Background = styled.div`
   height: 100vh;
   width: 100%;
-  background-image: url(${mountains});
+  /* background-image: url(${mountains}); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -25,21 +25,21 @@ const Background = styled.div`
 const Layout = ({ children }) => {
 
   return (
-      <div className='background'>
-        <Header />
-        <Spring
-          from={{ opacity: 0 }}
-          to={{ opacity: 1 }}
-        >
-          {opacity => (
-            <div style={opacity}>
-              <MainStyled>
-                {children}
-              </MainStyled>
-            </div>
-          )}
-        </Spring>
-      </div>
+    <div className='background'>
+      <Header />
+      <Spring
+        from={{ opacity: 0 }}
+        to={{ opacity: 1 }}
+      >
+        {opacity => (
+          <div style={opacity}>
+            <MainStyled>
+              {children}
+            </MainStyled>
+          </div>
+        )}
+      </Spring>
+    </div>
   )
 }
 
