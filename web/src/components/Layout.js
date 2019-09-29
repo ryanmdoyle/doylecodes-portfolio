@@ -8,29 +8,40 @@ import "./layout.css";
 import StyledBackground from '../components/StyledBackground';
 
 const MainStyled = styled.main`
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 0 1.1rem 1.5rem 1.1rem;
+  display: grid;
+  grid: 100vh / 25vw 75vw;
+  margin: 0;
+
+  @media (max-width: 900px) {
+    grid: 25vw 75vw / 100vw;
+  }
+`;
+
+const Nav = styled.div`
+  height: 100vh;
+  padding: 1rem;
+  margin: 0;
+`;
+
+const Content = styled.div`
+  height: 100vh;
+  padding: 1rem;
+  margin: 0;
 `;
 
 const Layout = ({ children }) => {
 
   return (
-    <StyledBackground>
-      <Header />
-      <Spring
-        from={{ opacity: 0 }}
-        to={{ opacity: 1 }}
-      >
-        {opacity => (
-          <div style={opacity}>
-            <MainStyled>
-              {children}
-            </MainStyled>
-          </div>
-        )}
-      </Spring>
-    </StyledBackground>
+    <MainStyled>
+      <Nav>
+        <Header />
+      </Nav>
+      <Content>
+        <StyledBackground>
+          {children}
+        </StyledBackground>
+      </Content>
+    </MainStyled>
   )
 }
 
