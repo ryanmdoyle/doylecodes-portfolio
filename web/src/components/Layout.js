@@ -13,20 +13,31 @@ const MainStyled = styled.main`
   margin: 0;
 
   @media (max-width: 900px) {
-    grid: 25vw 75vw / 100vw;
+    grid: 10vh 90vh / 100vw;
   }
 `;
 
 const Nav = styled.div`
   height: 100vh;
-  padding: 1rem;
+  padding: 0 2rem 0 1rem;
   margin: 0;
+  overflow: hidden;
+  background-color: rebeccapurple;
+
+  @media (max-width: 900px) {
+    height: 10vh;
+  }
 `;
 
 const Content = styled.div`
   height: 100vh;
-  padding: 1rem;
+  padding: 2rem;
   margin: 0;
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    height: 90vh;
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -37,9 +48,7 @@ const Layout = ({ children }) => {
         <Header />
       </Nav>
       <Content>
-        <StyledBackground>
-          {children}
-        </StyledBackground>
+        {children}
       </Content>
     </MainStyled>
   )

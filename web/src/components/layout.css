@@ -1,11 +1,40 @@
+html {
+  font-size: 10px;
+}
+
 body {
   margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Patua One', cursive;
+  color: rebeccapurple;
 }
 
 p, a, li {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
+  font-size: 2rem;
+  color: #242424;
 }
-h1, h2, h3, h4 {
-  font-family: 'Patua One', cursive;
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2rem;
 }

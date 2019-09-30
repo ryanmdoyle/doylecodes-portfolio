@@ -11,10 +11,10 @@ const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
-  height: 80px;
-  color: black;
+  height: 10vh;
+  color: #fafafa;
   padding: 0 2rem 0 2rem;
+
   h1, h2 {
     margin: 0;
   }
@@ -22,6 +22,7 @@ const HeaderStyle = styled.header`
     display: flex;
     list-style: none;
     margin: 0;
+    padding: 0 1rem;
   }
   li {
     padding: 0 1rem;
@@ -35,14 +36,8 @@ const HeaderStyle = styled.header`
     transition: color 1s, transform 0.5s;
   }
   a {
-    color: black;
+    color: #fafafa;
     text-decoration: none;
-  }
-  .icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5rem;
   }
 `;
 
