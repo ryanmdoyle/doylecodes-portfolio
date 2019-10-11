@@ -6,30 +6,72 @@ import { Spring } from 'react-spring/renderprops'
 import { Location } from '@reach/router';
 
 import HeaderLinks from './HeaderLinks';
+import SwipeButton from './styledComponents/SwipeButton';
 
-const HeaderStyle = styled.header`
+const HeaderStyled = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  height: 10vh;
   color: #fafafa;
-  padding: 0 2rem 0 2rem;
+  background-color: rebeccapurple;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 900px) {
+    padding: 0;
+  }
 
   h1, h2 {
     margin: 0;
   }
-  ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0 1rem;
+`;
+
+const NavContainer = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`;
+
+const NavList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 1rem;
+
+  @media (max-width: 900px) {
+    flex-direction: row;
   }
+
   li {
-    padding: 0 1rem;
-    margin: 0;
+    padding: 0.7rem 1rem;
+    margin: 1rem 0;
     font-weight: bold;
     transition: color 1s, transform 0.5s;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    position: relative;
   }
+
+  li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    z-index: -1;
+    transform: rotateX('90');
+    /* translate here */
+    transition: transform 0.3s;
+  }
+
   li:hover, a:hover {
     transform: scale(1.2);
     color: rebeccapurple;
@@ -43,16 +85,17 @@ const HeaderStyle = styled.header`
 
 const Header = ({ siteTitle }) => {
   return (
-    <HeaderStyle>
-      <div className='nav'>
-        <ul>
+    <HeaderStyled>
+      <NavContainer>
+        <NavList>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/work/">Work</Link></li>
           <li><Link to="/about/">About</Link></li>
           <li><Link to="/contact/">Contact</Link></li>
-        </ul>
-      </div>
-      <Location>
+          <SwipeButton/>
+        </NavList>
+      </NavContainer>
+      {/* <Location>
         {({ location }) => {
           if (location.pathname !== "/") {
             console.log(location);
@@ -80,8 +123,8 @@ const Header = ({ siteTitle }) => {
             )
           }
         }}
-      </Location>
-    </HeaderStyle>
+      </Location> */}
+    </HeaderStyled>
   )
 }
 
@@ -95,4 +138,4 @@ Header.defaultProps = {
 }
 
 export default Header;
-export { HeaderStyle };
+export { HeaderStyled };

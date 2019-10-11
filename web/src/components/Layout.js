@@ -19,10 +19,11 @@ const MainStyled = styled.main`
 
 const Nav = styled.div`
   height: 100vh;
-  padding: 0 2rem 0 1rem;
+  padding: 2rem;
   margin: 0;
   overflow: hidden;
   background-color: rebeccapurple;
+  box-sizing: border-box;
 
   @media (max-width: 900px) {
     height: 10vh;
@@ -34,6 +35,8 @@ const Content = styled.div`
   padding: 2rem;
   margin: 0;
   overflow: hidden;
+  box-sizing: border-box;
+
 
   @media (max-width: 900px) {
     height: 90vh;
