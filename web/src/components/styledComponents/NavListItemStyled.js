@@ -54,6 +54,27 @@ const StyledNavListItem = styled.li`
     transform: translateX(80%) skewX(-15deg);
     transition: transform 0.3s;
   }
+
+  @media (max-width: 900px) {
+    padding: 0;
+    margin: 0 1rem;
+    background-color: rebeccapurple;
+    overflow: hidden;
+    a:hover {
+      color: white;
+    }
+    :before {
+      display: none;
+    }
+    :after {
+      background-color: white;
+      height: 2px;
+      transform: translateX(-100%);
+    }
+    :hover:after {
+      transform: translateX(0);
+    }
+  }
 `;
 
 export default function NavListItemStyled(props) {
