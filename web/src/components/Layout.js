@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from 'styled-components';
-import { Spring } from 'react-spring/renderprops';
 
 import Header from "./Header";
 import "./layout.css";
-import StyledBackground from '../components/StyledBackground';
 
 const MainStyled = styled.main`
   display: grid;
@@ -19,10 +17,11 @@ const MainStyled = styled.main`
 
 const Nav = styled.div`
   height: 100vh;
-  padding: 0 2rem 0 1rem;
+  padding: 2rem;
   margin: 0;
   overflow: hidden;
   background-color: rebeccapurple;
+  box-sizing: border-box;
 
   @media (max-width: 900px) {
     height: 10vh;
@@ -34,6 +33,8 @@ const Content = styled.div`
   padding: 2rem;
   margin: 0;
   overflow: hidden;
+  box-sizing: border-box;
+
 
   @media (max-width: 900px) {
     height: 90vh;
