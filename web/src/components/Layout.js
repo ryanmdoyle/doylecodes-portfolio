@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from 'styled-components';
-import { Spring } from 'react-spring/renderprops';
 
 import Header from "./Header";
 import "./layout.css";
-import StyledBackground from '../components/StyledBackground';
 
 const MainStyled = styled.main`
   display: grid;

@@ -1,12 +1,9 @@
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import styled from 'styled-components';
-import { Spring } from 'react-spring/renderprops'
-import { Location } from '@reach/router';
 
-import HeaderLinks from './HeaderLinks';
-import SwipeButton from './styledComponents/SwipeButton';
+// import HeaderLinks from './HeaderLinks';
+import NavListItemStyled from './styledComponents/NavListItemStyled';
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -33,6 +30,7 @@ const NavContainer = styled.nav`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  width: 100%;
 `;
 
 const NavList = styled.ul`
@@ -46,17 +44,7 @@ const NavList = styled.ul`
 
   @media (max-width: 900px) {
     flex-direction: row;
-  }
-
-  li {
-    padding: 0.7rem 1rem;
-    margin: 1rem 0;
-    font-weight: bold;
-    transition: color 1s, transform 0.5s;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    position: relative;
-  }
+  } 
 `;
 
 const Header = ({ siteTitle }) => {
@@ -64,10 +52,10 @@ const Header = ({ siteTitle }) => {
     <HeaderStyled>
       <NavContainer>
         <NavList>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/work/">Work</Link></li>
-          <li><Link to="/about/">About</Link></li>
-          <li><Link to="/contact/">Contact</Link></li>
+          <NavListItemStyled to='/' title='Home' />
+          <NavListItemStyled to='/work' title='Work' />
+          <NavListItemStyled to='/about' title='About' />
+          <NavListItemStyled to='/contact' title='Contact' />
         </NavList>
       </NavContainer>
     </HeaderStyled>
