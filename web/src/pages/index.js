@@ -11,8 +11,8 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Welcome>
       <div className='welcome__text'>
-        <h1 className='greeting'>Hello, I'm Ryan.</h1>
-        <h2 className='tagline'>Developer, Learner, Educator</h2>
+        <h1>Hello, I'm Ryan.</h1>
+        <h2>Developer, Learner, Educator</h2>
         <Spring
           from={{ opacity: 0 }}
           to={{ opacity: 1 }}
@@ -38,50 +38,40 @@ const Welcome = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  .greeting {
-    color: white;
-    width: 100%;
-  }
-  .tagline {
-    color: white;
-    width: 100%;
-  }
   .welcome__text {
     text-align: center;
   }
 `;
 
 const IconsStyled = styled.div`
-padding-top: 3rem;
+padding-top: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+
   ul {
     display: flex;
     list-style: none;
     margin: 0;
+    padding: 0;
   }
   li {
-    padding: 0 1rem;
+    padding: 0 2rem;
     margin: 0;
-    font-weight: bold;
-    color: white;
-    transition: transform 1s;
+    color: rebeccapurple;
+    transition: transform 0.2s;
   }
   li:hover {
     transform: scale(1.2);
-    transition: transform 1s;
+    transition: transform 0.2s;
   }
   a {
-    color: white;
-    transition: color 0.5s;
+    color: rebeccapurple;
+    transition: color 0.2s;
   }
   a:hover {
     color: rebeccapurple;
-    transition: color 0.5s; 
-  }
-  .icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2rem;
+    transition: color 0.2s; 
   }
 `;
 
