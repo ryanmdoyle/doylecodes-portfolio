@@ -7,7 +7,7 @@ const ProjectCard = styled.div`
     text-align: center;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
     line-height: 0.9rem;
     text-align: center;

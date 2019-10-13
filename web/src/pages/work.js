@@ -20,8 +20,8 @@ const PortfolioGrid = styled.div`
 const Work = ({ data }) => (
   <PageFade>
     <SEO title="Work" />
-    <h1>Work</h1>
     <ContentContainer>
+      <h3>Projects</h3>
       <PortfolioGrid>
         {data.allSanityProject.nodes.map(p => (
           <PortfolioProject
@@ -33,7 +33,6 @@ const Work = ({ data }) => (
           />
         ))}
       </PortfolioGrid>
-
     </ContentContainer>
   </PageFade>
 )
