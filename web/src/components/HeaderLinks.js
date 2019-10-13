@@ -17,7 +17,7 @@ const HeaderLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
             href='https://github.com/ryanmdoyle'>
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} size='3x'/>
           </a>
         </li>
         <li>
@@ -25,7 +25,7 @@ const HeaderLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
             href='https://dev.to/doylecodes'>
-            <FontAwesomeIcon icon={faDev} />
+            <FontAwesomeIcon icon={faDev} size='3x' />
           </a>
         </li>
         <li>
@@ -33,7 +33,7 @@ const HeaderLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
             href='https://www.freecodecamp.org/ryanmdoyle'>
-            <FontAwesomeIcon icon={faFreeCodeCamp} />
+            <FontAwesomeIcon icon={faFreeCodeCamp} size='3x' />
           </a>
         </li>
         <li>
@@ -41,7 +41,7 @@ const HeaderLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
             href='https://codepen.io/ryanmdoyle/#'>
-            <FontAwesomeIcon icon={faCodepen} />
+            <FontAwesomeIcon icon={faCodepen} size='3x' />
           </a>
         </li>
         <li>
@@ -49,7 +49,7 @@ const HeaderLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
             href='https://twitter.com/doylecodes'>
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faTwitter} size='3x' />
           </a>
         </li>
       </ul>
@@ -62,7 +62,10 @@ const StyledLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
+  path {
+    height: 50px;
+    width: 50px;
+  }
 `;
 
 export default HeaderLinks;

@@ -8,10 +8,9 @@ import PageFade from '../components/PageFade';
 const Contact = () => (
   <PageFade>
     <SEO title="contact" />
-    <h1>Contact</h1>
     <ContentContainer>
       <div className='text'>
-        <h2>Let's Talk!</h2>
+        <h3>Let's Talk!</h3>
         <p>Want to say hi? Need some help on a project or looking to talk about working on something new? Shot me an email below and we can talk!</p>
       </div>
       <FormStyled>
