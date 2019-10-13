@@ -76,6 +76,12 @@ const StyledNavListItem = styled.li`
       transform: translateX(0);
     }
   }
+
+  @media (max-width: 450px) {
+    a {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 export default function NavListItemStyled(props) {
