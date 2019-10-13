@@ -73,6 +73,12 @@ align-items: center;
     color: rebeccapurple;
     transition: color 0.2s; 
   }
+
+  @media (max-width: 600px) {
+    li {
+      padding: 0 1rem;
+    }
+  }
 `;
 
 export default IndexPage
