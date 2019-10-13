@@ -30,6 +30,7 @@ const Work = ({ data }) => (
             background={p.featureImage.asset.fixed.src}
             github={p.github}
             liveSite={p.liveSiteURL}
+            id={p.title}
           />
         ))}
       </PortfolioGrid>

@@ -9,6 +9,7 @@ const ContentContainer = styled.div`
   border-radius: 0.25rem;
   overflow-y: auto;
   overflow-x: hidden;
+  box-sizing: border-box;
 
   @media (max-width:900px) {
     padding: 0;

@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ProjectCard = styled.div`
+  box-sizing: border-box;
+
   h2 {
-    font-size: 1.2rem;
+    color: white;
+    font-size: 3rem;
     text-align: center;
+    padding-bottom: 2rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     line-height: 0.9rem;
     text-align: center;
@@ -21,10 +25,13 @@ const ProjectCard = styled.div`
     overflow: hidden;
     transition: box-shadow 0.3s;
     box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.2);
+    box-sizing: border-box;
+
   }
   .card:hover {
     box-shadow: 0 0 20px 5px rgb(0, 0, 0, 0.5);
     transition: box-shadow 0.3s;
+    box-sizing: border-box;
   }
   .card--hover {
     height: 100%;
@@ -38,6 +45,8 @@ const ProjectCard = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-sizing: border-box;
+
   }
   .card--hover h2 {
     margin-bottom: 0.5rem;
@@ -50,10 +59,10 @@ const ProjectCard = styled.div`
   a {
     color: white;
     border: 1px solid white;
-    padding: 5px;
+    padding: 1rem;
     text-decoration: none;
     transition: border-radius 0.5s, background-color 0.5s;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
     display: inline-block;
     margin: 0 0.5rem;
   }
@@ -73,7 +82,7 @@ const PortfolioProject = (props) => {
       <div className='card' style={{ backgroundImage: `url('${props.background}')` }}>
         <div className='card--hover'>
           <h2>{props.title}</h2>
-          <p>{props.description}</p>
+          {/* <p>{props.description}</p> */}
           <div>
             {props.github && (<a href={props.github}>Github</a>)}
             {props.liveSite && (<a href={props.liveSite}>Live Site</a>)}

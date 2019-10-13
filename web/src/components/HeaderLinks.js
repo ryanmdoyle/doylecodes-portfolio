@@ -62,9 +62,8 @@ const StyledLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  path {
-    height: 50px;
-    width: 50px;
+  a {
+    width: 100%;
   }
 `;
 
