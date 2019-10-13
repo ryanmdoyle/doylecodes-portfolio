@@ -56,22 +56,22 @@ align-items: center;
     padding: 0;
   }
   li {
-    padding: 0 1rem;
+    padding: 0 2rem;
     margin: 0;
     color: rebeccapurple;
-    transition: transform 1s;
+    transition: transform 0.2s;
   }
   li:hover {
     transform: scale(1.2);
-    transition: transform 1s;
+    transition: transform 0.2s;
   }
   a {
     color: rebeccapurple;
-    transition: color 0.5s;
+    transition: color 0.2s;
   }
   a:hover {
     color: rebeccapurple;
-    transition: color 0.5s; 
+    transition: color 0.2s; 
   }
 `;
 

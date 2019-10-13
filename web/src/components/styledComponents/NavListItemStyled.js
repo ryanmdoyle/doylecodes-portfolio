@@ -5,13 +5,14 @@ import styled from 'styled-components'
 const StyledNavListItem = styled.li`
   padding: 0.7rem 1rem;
   margin: 1rem 0;
-  font-weight: bold;
+  /* font-weight: bold; */
   transition: color 1s, transform 0.5s;
   position: relative;
   background-color: white;
   z-index: 1;
 
   a {
+    font-size: 2.2rem;
     text-decoration: none;
     color: white;
     position: relative;
