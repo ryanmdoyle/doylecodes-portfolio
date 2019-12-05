@@ -30,11 +30,11 @@ const Contact = () => (
             <label>Your Name</label>
           </div>
           <div class='pseudo-table'>
-            <input type='email' name='name' required />
+            <input type='email' name='email' required />
             <label>Your Email Address</label>
           </div>
           <div class='pseudo-table'>
-            <textarea type='text' name='name' required />
+            <textarea type='text' name='message' required />
             <label>Message</label>
           </div>
           <button type='submit'>Get in touch!</button>
