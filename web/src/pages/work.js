@@ -16,6 +16,7 @@ const PortfolioGrid = styled.div`
   height: auto;
   padding: 0;
   margin: 0;
+  margin-bottom: 50px;
 `;
 
 const Work = () => {
