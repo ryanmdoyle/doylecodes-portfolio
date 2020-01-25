@@ -1,11 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import SEO from "../components/SEO";
 import ContentContainer from '../components/styledComponents/ContentContainer';
 import PageFade from '../components/PageFade';
 import PortfolioProject from '../components/PortfolioProject';
+import ProjectCard from '../components/ProjectCard';
 
 const PortfolioGrid = styled.div`
   display: flex;
@@ -17,28 +18,8 @@ const PortfolioGrid = styled.div`
   margin: 0;
 `;
 
-const Work = ({ data }) => (
-  <PageFade>
-    <SEO title="Work" />
-    <ContentContainer>
-      <h3>Projects</h3>
-      <PortfolioGrid>
-        {data.allSanityProject.nodes.map(p => (
-          <PortfolioProject
-            title={p.title}
-            description={p.description}
-            background={p.featureImage.asset.fixed.src}
-            github={p.github}
-            liveSite={p.liveSiteURL}
-            id={p.title}
-          />
-        ))}
-      </PortfolioGrid>
-    </ContentContainer>
-  </PageFade>
-)
-
-export const query = graphql`
+const Work = () => {
+  const data = useStaticQuery(graphql`
   query MyQuery {
     allSanityProject {
       nodes {
@@ -49,14 +30,45 @@ export const query = graphql`
         liveSiteURL
         featureImage {
           asset {
-            fixed(width: 300) {
+            fixed(width: 200, height: 200) {
               src
+              aspectRatio
+              base64
+              height
+              srcSet
+              srcSetWebp
+              srcWebp
+              width
             }
           }
         }
       }
     }
   }
-`;
+  `)
+
+  console.log(data);
+  return (
+    <PageFade>
+      <SEO title="Work" />
+      <ContentContainer>
+        <h3>Projects</h3>
+        <PortfolioGrid>
+          {data.allSanityProject.nodes.map(p => (
+            <ProjectCard
+              title={p.title}
+              description={p.description}
+              fixed={p.featureImage.asset.fixed}
+              github={p.github}
+              liveSite={p.liveSiteURL}
+              id={p.title}
+            />
+          ))}
+        </PortfolioGrid>
+
+      </ContentContainer>
+    </PageFade>
+  )
+}
 
 export default Work

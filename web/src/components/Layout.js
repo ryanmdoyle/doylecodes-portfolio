@@ -10,6 +10,10 @@ const MainStyled = styled.main`
   grid: 100vh / 25vw 75vw;
   margin: 0;
 
+  @media (min-width: 1350px) {
+    grid: 100vh / 337px auto;
+  }
+
   @media (max-width: 900px) {
     grid: 10vh 90vh / 100vw;
   }
