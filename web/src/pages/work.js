@@ -21,34 +21,43 @@ const PortfolioGrid = styled.div`
 
 const Work = () => {
   const data = useStaticQuery(graphql`
-  query MyQuery {
-    allSanityProject {
-      nodes {
-        description
-        id
-        title
-        github
-        liveSiteURL
-        featureImage {
-          asset {
-            fixed(width: 200, height: 200) {
-              src
-              aspectRatio
-              base64
-              height
-              srcSet
-              srcSetWebp
-              srcWebp
-              width
+    query MyQuery {
+      allSanityProject {
+        nodes {
+          description
+          id
+          title
+          github
+          liveSiteURL
+          featureImage {
+            asset {
+              square: fixed(width: 200, height: 200) {
+                src
+                aspectRatio
+                base64
+                height
+                srcSet
+                srcSetWebp
+                srcWebp
+                width
+              }
+              rect: fixed(width: 500, height: 200) {
+                src
+                aspectRatio
+                base64
+                height
+                srcSet
+                srcSetWebp
+                srcWebp
+                width
+              }
             }
           }
         }
       }
     }
-  }
   `)
 
-  console.log(data);
   return (
     <PageFade>
       <SEO title="Work" />
@@ -59,7 +68,7 @@ const Work = () => {
             <ProjectCard
               title={p.title}
               description={p.description}
-              fixed={p.featureImage.asset.fixed}
+              asset={p.featureImage.asset}
               github={p.github}
               liveSite={p.liveSiteURL}
               id={p.title}

@@ -5,7 +5,8 @@ import Img from 'gatsby-image';
 import { DiGithubBadge } from "react-icons/di";
 import { FiExternalLink } from "react-icons/fi"
 
-const CardContainer_S = styled.div`
+const CardContainerStyled = styled.div`
+  --mobileBreak: 550px;
   box-sizing: border-box;
   width: 100%;
   max-width: 900px;
@@ -28,6 +29,16 @@ const CardContainer_S = styled.div`
   .image {
     width: 200px;
     height: 100%;
+    /*  Desktop Images */
+    @media (min-width: 550px) {
+      .mobile { display: none; }
+      .square { display: inline-block; }
+    }
+    /* Mobile Images */
+    @media (max-width: 550px) {
+      .mobile { display: inline-block; }
+      .square { display: none; }
+    }
   }
 
   .content {
@@ -51,9 +62,25 @@ const CardContainer_S = styled.div`
     max-width: calc(50% - 20px);
   }
 
+  @media (max-width: 550px) {
+    flex-direction: column;
+    .image {
+      width: 100%;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+    .content {
+      width: 100%;
+      height: 200px;
+      margin-top:10px;
+    }
+  }
+
 `;
 
-const Icon_S = styled.div`
+const IconStyled = styled.div`
   justify-self: end;
   svg {
     height: 40px;
@@ -61,22 +88,24 @@ const Icon_S = styled.div`
   }
 `;
 
-const ProjectCard = ({ title, description, liveSite, github, fixed }) => {
+const ProjectCard = ({ title, description, liveSite, github, asset }) => {
+
   return (
-    <CardContainer_S>
+    <CardContainerStyled>
       <div className='image'>
-        <Img fixed={fixed} />
+        <Img fixed={asset.square} className='square' style={{ display: 'inherit' }} />
+        <Img fixed={asset.rect} className='mobile' style={{ display: 'inherit' }} />
       </div>
       <div className='content'>
         <h4>{title}</h4>
         <p>{description}</p>
-        <Icon_S>
+        <IconStyled>
           {github ? <a href={github} target="_blank" rel="noopener noreferrer"><DiGithubBadge /></a> : null}
           {liveSite ? <a href={liveSite} target="_blank" rel="noopener noreferrer"><FiExternalLink /></a> : null}
-        </Icon_S>
+        </IconStyled>
 
       </div>
-    </CardContainer_S>
+    </CardContainerStyled>
   );
 };
 
