@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
@@ -108,5 +109,13 @@ const ProjectCard = ({ title, description, liveSite, github, asset }) => {
     </CardContainerStyled>
   );
 };
+
+ProjectCard.propTypes = {
+  asset: PropTypes.any,
+  description: PropTypes.string,
+  github: PropTypes.string,
+  liveSite: PropTypes.string,
+  title: PropTypes.string
+}
 
 export default ProjectCard;

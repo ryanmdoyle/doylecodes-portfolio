@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from 'react';
 import styled from 'styled-components';
 
@@ -93,5 +94,12 @@ const PortfolioProject = (props) => {
 
   );
 };
+
+PortfolioProject.propTypes = {
+  background: PropTypes.any,
+  github: PropTypes.string,
+  liveSite: PropTypes.string,
+  title: PropTypes.string
+}
 
 export default PortfolioProject;

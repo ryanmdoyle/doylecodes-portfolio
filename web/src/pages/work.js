@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import SEO from "../components/SEO";
 import ContentContainer from '../components/styledComponents/ContentContainer';
 import PageFade from '../components/PageFade';
-import PortfolioProject from '../components/PortfolioProject';
 import ProjectCard from '../components/ProjectCard';
 
 const PortfolioGrid = styled.div`
@@ -22,34 +21,36 @@ const PortfolioGrid = styled.div`
 const Work = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      allSanityProject {
+      allSanityProjectsOrder {
         nodes {
-          description
-          id
-          title
-          github
-          liveSiteURL
-          featureImage {
-            asset {
-              square: fixed(width: 200, height: 200) {
-                src
-                aspectRatio
-                base64
-                height
-                srcSet
-                srcSetWebp
-                srcWebp
-                width
-              }
-              rect: fixed(width: 500, height: 200) {
-                src
-                aspectRatio
-                base64
-                height
-                srcSet
-                srcSetWebp
-                srcWebp
-                width
+          projectOrder {
+            description
+            github
+            id
+            liveSiteURL
+            title
+            featureImage {
+              asset {
+                square: fixed(width: 200, height: 200) {
+                  src
+                  aspectRatio
+                  base64
+                  height
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                  width
+                }
+                rect: fixed(width: 500, height: 200) {
+                  src
+                  aspectRatio
+                  base64
+                  height
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                  width
+                }
               }
             }
           }
@@ -64,7 +65,7 @@ const Work = () => {
       <ContentContainer>
         <h3>Projects</h3>
         <PortfolioGrid>
-          {data.allSanityProject.nodes.map(p => (
+          {data.allSanityProjectsOrder.nodes[0].projectOrder.map(p => (
             <ProjectCard
               title={p.title}
               description={p.description}

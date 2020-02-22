@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image'
-import { StaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
 const BackgroundSection = ({ className, children }) => (
@@ -31,6 +32,11 @@ const BackgroundSection = ({ className, children }) => (
     }
   />
 )
+
+BackgroundSection.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string
+}
 
 const StyledBackground = styled(BackgroundSection)`
   height: 100vh;
